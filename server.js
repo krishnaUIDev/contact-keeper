@@ -1,7 +1,11 @@
 const express = require("express");
+const connectDB = require("./config/db");
 
 const app = express();
-
+// connect db
+connectDB();
+// Init middleware
+app.use(express.json({ extended: false }));
 app.get("/", (req, res) => res.send("hey"));
 
 // Define Routes

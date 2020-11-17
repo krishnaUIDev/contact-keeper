@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "3c965fd6-fbd7-4e67-a9de-b36fea00803e",
+		"name": "Contact-keeper",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users && Auth",
+			"item": [
+				{
+					"name": "Register user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "JSON Type",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jkirhsn a\",\r\n    \"email\": \"krishna@gmail.com\",\r\n    \"password\": \"12dfsfasdf3\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "JSON Type",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"email\": \"krishna@gmail.com\",\r\n   \"password\": \"12dfsfasdf3\" \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get login user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWZiNDMyYjkwMDA2MDg1ZTQ4NTFlYmY3In0sImlhdCI6MTYwNTY1MzExMywiZXhwIjoxNjA2MDEzMTEzfQ.k2F0v6nvI1XMIsXU9-p4rmmZI3shXY1WrHp6FnTJ6k8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Contacts",
+			"item": [
+				{
+					"name": "get all contacts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWZiNDRjYzJjNjQwYmQyYjBjZDYyMjBlIn0sImlhdCI6MTYwNTY1MTY1MSwiZXhwIjoxNjA2MDExNjUxfQ.AoMYh5LRDk6sAMjSEwGsp9fVHPWMV-zN1w_7cdyEO5E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/contacts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Contact",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWZiNDRjYzJjNjQwYmQyYjBjZDYyMjBlIn0sImlhdCI6MTYwNTY1MTY1MSwiZXhwIjoxNjA2MDExNjUxfQ.AoMYh5LRDk6sAMjSEwGsp9fVHPWMV-zN1w_7cdyEO5E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"hackers@gmail.com\",\r\n    \"name\": \"krishna\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/contacts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"contacts"
+							],
+							"query": [
+								{
+									"key": "x-auth-token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWZiNDMyYjkwMDA2MDg1ZTQ4NTFlYmY3In0sImlhdCI6MTYwNTY0OTAxMSwiZXhwIjoxNjA2MDA5MDExfQ.NcYVEn4T-HYNoFCAaIXLzkSP-e5HO8S10k2duYDFsvo",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update contact ",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWZiNDMyYjkwMDA2MDg1ZTQ4NTFlYmY3In0sImlhdCI6MTYwNTY1MjMxNywiZXhwIjoxNjA2MDEyMzE3fQ.LIPEbWYUaC9mMkjVrCeyXwEMlk0gIUT5QB4cWYJ9Ulw",
+								"description": "JSON Type",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"hey\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/contacts/5fb44cf4c640bd2b0cd62210",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"contacts",
+								"5fb44cf4c640bd2b0cd62210"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete contact",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWZiNDRjYzJjNjQwYmQyYjBjZDYyMjBlIn0sImlhdCI6MTYwNTY1MzIxMCwiZXhwIjoxNjA2MDEzMjEwfQ.sOKupi49sUFo59Sd9WE7YC-8evtEO8k1NP8B27YT-gY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/contacts/5fb44cf4c640bd2b0cd62210",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"contacts",
+								"5fb44cf4c640bd2b0cd62210"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

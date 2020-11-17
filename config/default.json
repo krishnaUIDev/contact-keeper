@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://user:1234@cluster0.sln7s.mongodb.net/playground?retryWrites=true&w=majority",
+  "jwtSecret": "secret"
+}
