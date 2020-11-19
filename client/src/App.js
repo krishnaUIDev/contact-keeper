@@ -7,6 +7,8 @@ import Alerts from "./components/layout/Alerts";
 import NavBar from "./components/layout/Navbar";
 import About from "./components/Pages/About";
 import Home from "./components/Pages/Home";
+import PrivateRoutes from "./components/routing/PrivateRoutes";
+
 import AlertState from "./context/alert/AlertState";
 import AuthState from "./context/auth/AuthState";
 import ContactState from "./context/contact/ContactState";
@@ -26,7 +28,7 @@ const App = () => {
               <div className="container">
                 <Alerts />
                 <Switch>
-                  <Route path="/" exact component={Home} />
+                  <PrivateRoutes path="/" exact component={Home} />
                   <Route path="/about" exact component={About} />
                   <Route path="/register" component={Register} />
                   <Route path="/login" component={Login} />
